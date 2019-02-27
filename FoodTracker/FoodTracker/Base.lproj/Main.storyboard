@@ -19,21 +19,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Lka-Lj-lut">
-                                <rect key="frame" x="0.0" y="40" width="375" height="96.5"/>
+                                <rect key="frame" x="0.0" y="40" width="375" height="68"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBx-XA-Znc">
-                                        <rect key="frame" x="144.5" y="0.0" width="86.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Meal Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBx-XA-Znc">
+                                        <rect key="frame" x="144.5" y="0.0" width="86.5" height="0.0"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Meal Name:" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Vy6-4J-SdU">
-                                        <rect key="frame" x="16" y="28.5" width="343" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Meal Name:" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Vy6-4J-SdU">
+                                        <rect key="frame" x="16" y="8" width="343" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="4N5-nV-a67"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYn-9b-Dag">
-                                        <rect key="frame" x="112" y="66.5" width="151" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYn-9b-Dag">
+                                        <rect key="frame" x="112" y="56" width="151" height="12"/>
                                         <state key="normal" title="Set Default Label Text"/>
                                         <connections>
                                             <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yXv-Zo-rrM"/>
@@ -45,23 +48,46 @@
                                     <constraint firstItem="Vy6-4J-SdU" firstAttribute="leading" secondItem="Lka-Lj-lut" secondAttribute="leadingMargin" constant="16" id="gkT-q2-zKz"/>
                                 </constraints>
                             </stackView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lorum_ipsum_dog" translatesAutoresizingMaskIntoConstraints="NO" id="7KS-VX-Rpq">
+                                <rect key="frame" x="13" y="115" width="349" height="349"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7KS-VX-Rpq" secondAttribute="height" multiplier="1:1" id="V7Y-UL-rAW"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="oAg-hs-PLi" appends="YES" id="5Np-sp-h3b"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7KS-VX-Rpq" secondAttribute="bottom" constant="203" id="CHy-4E-EFj"/>
+                            <constraint firstItem="7KS-VX-Rpq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="13" id="GMl-HH-97x"/>
                             <constraint firstAttribute="trailing" secondItem="Lka-Lj-lut" secondAttribute="trailing" id="Rwn-zr-y8U"/>
                             <constraint firstItem="Lka-Lj-lut" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="WXZ-V3-ZAA"/>
                             <constraint firstItem="Lka-Lj-lut" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gLg-TI-FUp"/>
+                            <constraint firstItem="7KS-VX-Rpq" firstAttribute="top" secondItem="Lka-Lj-lut" secondAttribute="bottom" constant="7" id="nw0-yZ-JQJ"/>
+                            <constraint firstItem="7KS-VX-Rpq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uYm-U2-UrY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="mealNameLabel" destination="HBx-XA-Znc" id="wdA-3z-jHw"/>
                         <outlet property="nameTextField" destination="Vy6-4J-SdU" id="svn-4t-wgZ"/>
+                        <outlet property="photoImageView" destination="7KS-VX-Rpq" id="YNI-wO-x3w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="oAg-hs-PLi">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="8Lm-em-A5s"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="140" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lorum_ipsum_dog" width="350" height="200"/>
+    </resources>
 </document>
