@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Lka-Lj-lut">
-                                <rect key="frame" x="0.0" y="40.5" width="375" height="106.5"/>
+                                <rect key="frame" x="0.0" y="40" width="382" height="116"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBx-XA-Znc">
-                                        <rect key="frame" x="144.5" y="0.0" width="86.5" height="20.5"/>
+                                        <rect key="frame" x="148" y="0.0" width="86.5" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="2yr-gA-JPd"/>
@@ -31,7 +31,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Meal Name:" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Vy6-4J-SdU">
-                                        <rect key="frame" x="16" y="28.5" width="343" height="40"/>
+                                        <rect key="frame" x="16" y="38" width="350" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="4N5-nV-a67"/>
                                         </constraints>
@@ -39,7 +39,7 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYn-9b-Dag">
-                                        <rect key="frame" x="112" y="76.5" width="151" height="30"/>
+                                        <rect key="frame" x="115.5" y="86" width="151" height="30"/>
                                         <state key="normal" title="Set Default Label Text"/>
                                         <connections>
                                             <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yXv-Zo-rrM"/>
@@ -52,7 +52,7 @@
                                 </constraints>
                             </stackView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lorum_ipsum_dog" translatesAutoresizingMaskIntoConstraints="NO" id="7KS-VX-Rpq">
-                                <rect key="frame" x="13" y="154" width="349" height="349"/>
+                                <rect key="frame" x="13" y="163" width="350" height="350"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7KS-VX-Rpq" secondAttribute="height" multiplier="1:1" id="V7Y-UL-rAW"/>
@@ -61,16 +61,26 @@
                                     <outletCollection property="gestureRecognizers" destination="oAg-hs-PLi" appends="YES" id="5Np-sp-h3b"/>
                                 </connections>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKc-MT-dU3" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                <rect key="frame" x="16" y="533" width="350" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="b1n-TU-7V8"/>
+                                    <constraint firstAttribute="width" constant="350" id="im0-oZ-1o9"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7KS-VX-Rpq" secondAttribute="bottom" constant="203" id="CHy-4E-EFj"/>
                             <constraint firstItem="7KS-VX-Rpq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="13" id="GMl-HH-97x"/>
                             <constraint firstAttribute="trailing" secondItem="Lka-Lj-lut" secondAttribute="trailing" id="Rwn-zr-y8U"/>
-                            <constraint firstItem="Lka-Lj-lut" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="WXZ-V3-ZAA"/>
+                            <constraint firstItem="WKc-MT-dU3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="UNx-zz-gYf"/>
+                            <constraint firstItem="WKc-MT-dU3" firstAttribute="top" secondItem="7KS-VX-Rpq" secondAttribute="bottom" constant="20" id="Xzu-aP-GD3"/>
                             <constraint firstItem="Lka-Lj-lut" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gLg-TI-FUp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WKc-MT-dU3" secondAttribute="trailing" constant="16" id="kvQ-PT-zQK"/>
                             <constraint firstItem="7KS-VX-Rpq" firstAttribute="top" secondItem="Lka-Lj-lut" secondAttribute="bottom" constant="7" id="nw0-yZ-JQJ"/>
                             <constraint firstItem="7KS-VX-Rpq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uYm-U2-UrY"/>
+                            <constraint firstItem="Lka-Lj-lut" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="yMh-wD-oHO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
