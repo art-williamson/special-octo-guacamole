@@ -96,8 +96,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleAspectFill" misplaced="YES" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WKc-MT-dU3" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                <rect key="frame" x="61" y="508" width="252" height="42"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WKc-MT-dU3" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                <rect key="frame" x="66.5" y="540" width="242" height="42"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="starSize">
                                         <size key="value" width="42" height="42"/>
@@ -123,13 +123,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="1jw-Q0-Weg">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ktx-sH-g3S"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ktx-sH-g3S">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="Wak-W1-B0l"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="8VC-u3-z5h"/>
                     </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="Vy6-4J-SdU" id="svn-4t-wgZ"/>
                         <outlet property="photoImageView" destination="7KS-VX-Rpq" id="YNI-wO-x3w"/>
                         <outlet property="ratingControl" destination="WKc-MT-dU3" id="aCq-3B-Wol"/>
+                        <outlet property="saveButton" destination="8VC-u3-z5h" id="gYL-En-QzR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
