@@ -47,6 +47,7 @@
                                     <outlet property="nameLabel" destination="OZU-ik-wRV" id="Sa8-g9-YDN"/>
                                     <outlet property="photoImageView" destination="SEm-vX-gEC" id="RHP-a5-1IG"/>
                                     <outlet property="ratingControl" destination="p7o-hE-Xxj" id="vre-Y5-OVg"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="jrn-20-sBa"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -128,7 +129,11 @@
                                 <action selector="cancel:" destination="BYZ-38-t0r" id="Wak-W1-B0l"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="8VC-u3-z5h"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="8VC-u3-z5h">
+                            <connections>
+                                <segue destination="h9w-hA-z6e" kind="unwind" unwindAction="unwindToMealListWithSender:" id="ac8-PR-dBi"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="Vy6-4J-SdU" id="svn-4t-wgZ"/>
@@ -138,6 +143,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="h9w-hA-z6e" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="oAg-hs-PLi">
                     <connections>
                         <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="8Lm-em-A5s"/>
@@ -180,10 +186,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g2W-29-kOe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1079.2" y="132.68365817091455"/>
+            <point key="canvasLocation" x="1066" y="583"/>
         </scene>
     </scenes>
     <resources>
         <image name="lorum_ipsum_dog" width="350" height="200"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="jrn-20-sBa"/>
+    </inferredMetricsTieBreakers>
 </document>
